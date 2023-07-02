@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4393a31c94.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css"/>
+    <title>ひろゆき３</title>
+  </head>
+  <body>
+    <h1>ループ処理</h1>
+    <script>
+
+      for(var i = 0; i < 10; i = i + 1) {
+        document.write(i);
+      }
+
+    </script>
+
+    <h1>ループ処理しない(ループ処理=>順次処理)</h1>
+    <script>
+        document.write(0);
+        document.write(1);
+        document.write(2);
+        document.write(3);
+        document.write(4);
+        document.write(5);
+        document.write(6);
+        document.write(7);
+        document.write(8);
+        document.write(9);
+    </script>
+
+    <h1>ループ処理</h1>
+    <script>
+      for(var i = 0; i < 100; i = i + 1) {
+//         1初期化    2条件式     4増減式
+        document.write(i);
+//        3繰り返す処理
+      }
+    </script>
+
+    <h1>順次処理(順次処理=>ループ処理)</h1>
+    <script>
+        var sum = 0;
+        sum = sum + 10;
+        document.write("<p>" + sum + "</p>");
+
+        sum = sum + 10;
+        document.write("<p>" + sum + "</p>");
+
+        sum = sum + 10;
+        document.write("<p>" + sum + "</p>");
+    </script>
+
+    <h1>順次処理=>ループ処理</h1>
+    <script>
+      var sum = 0;
+      for(var i = 0; i < 3; i = i + 1) {
+      sum = sum + 10;
+      document.write("<p>" + sum + "</p>");
+      }
+    </script>
+
+    <h1>順次処理=>ループ処理(変数sumの値が変化)</h1>
+    <script>
+      var sum = 0;
+      for(var i = 1; i < 4; i = i + 1) {
+      sum = sum + i * 5;
+      document.write("<p>" + sum + "</p>");
+      }
+    </script>
+
+    <h1>３の倍数と３がつく数字でアホになる</h1>
+    <script>
+      document.write("<p>1</p>");
+      document.write("<p>2</p>");
+      document.write("<p><mark>＼(^o^)／3</mark></p>");
+      document.write("<p>4</p>");
+      document.write("<p>5</p>");
+      document.write("<p><mark>＼(^o^)／6</mark></p>");
+      document.write("<p>7</p>");
+      document.write("<p>8</p>");
+      document.write("<p><mark>＼(^o^)／9</mark></p>");
+      document.write("<p>10</p>");
+      document.write("<p>11</p>");
+      document.write("<p><mark>＼(^o^)／12</mark></p>");
+      document.write("<p><mark>＼(^o^)／13</mark></p>");
+      document.write("<p>14</p>");
+      document.write("<p><mark>＼(^o^)／15</mark></p>");
+      document.write("<p>16</p>");
+      document.write("<p>17</p>");
+      document.write("<p><mark>＼(^o^)／18</mark></p>");
+      document.write("<p>19</p>");
+      document.write("<p>20</p>");
+      document.write("<p><mark>＼(^o^)／21</mark></p>");
+      document.write("<p>22</p>");
+      document.write("<p><mark>＼(^o^)／23</mark></p>");
+      document.write("<p><mark>＼(^o^)／24</mark></p>");
+      document.write("<p>25</p>");
+      document.write("<p>26</p>");
+      document.write("<p><mark>＼(^o^)／27</mark></p>");
+      document.write("<p>28</p>");
+      document.write("<p>29</p>");
+      document.write("<p><mark>＼(^o^)／30</mark></p>");
+      document.write("<p><mark>＼(^o^)／31</mark></p>");
+      document.write("<p><mark>＼(^o^)／32</mark></p>");
+      document.write("<p><mark>＼(^o^)／33</mark></p>");
+      document.write("<p><mark>＼(^o^)／34</mark></p>");
+      document.write("<p><mark>＼(^o^)／35</mark></p>");
+      document.write("<p><mark>＼(^o^)／36</mark></p>");
+      document.write("<p><mark>＼(^o^)／37</mark></p>");
+      document.write("<p><mark>＼(^o^)／38</mark></p>");
+      document.write("<p><mark>＼(^o^)／39</mark></p>");
+      document.write("<p>40</p>");
+    </script>
+
+    <h1>３の倍数と３がつく数字でアホになる(ループ処理)</h1>
+    <script>
+      for(var i = 1; i < 41; i = i + 1) {
+        if(i % 3 === 0 || String(i).includes("3")) {
+          document.write("<p><mark>＼(^o^)／" + i + "</mark></p>");
+        }else{
+          document.write("<p>" + i + "</p>");
+        }
+      }
+    </script>
+
+    <h1>文字列のループ処理</h1>
+    <script>
+      document.write("<p>中山</p>");
+      document.write("<p>山田</p>");
+      document.write("<p>田中</p>");
+    </script>
+
+    <h1>文字列のループ処理は配列を使う</h1>
+    <script>
+      var arr = ["中山", "山田", "田中"];
+      for(var i = 0; i < 3; i = i + 1) {
+        document.write("<p>" + arr[i] + "</p>");
+      }
+    </script>
+
+    <h1>仕事に熟練する</h1>
+    <script>
+      for (var i = 1; i <= 100; i = i + 1) {
+        if(i % 10 === 0) {
+          document.write("初心を思い出す");
+        }
+        else {
+          document.write("ルーチンワークでこなす");
+        }
+      }
+    </script>
+  </body>
+</html>
