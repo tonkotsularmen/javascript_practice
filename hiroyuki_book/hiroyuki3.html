@@ -111,5 +111,53 @@
         result = Math.round(result / 30 * 100);
         document.write(result + "点!");
       </script>
+
+      <h2>いいところ探し加重加点ver</h2>
+      <script>
+
+        var height = 168;
+        var income = 520;
+        var age = 36;
+        var result = 0;
+        if( height >= 175 ) {
+          document.write("<p>身長OK</p>");
+          result = result + 10;
+        }
+        if( income >= 500 ) {
+          document.write("<p>年収OK</p>");
+          result = result + 50;
+        }
+        if( height <= 35 ) {
+          document.write("<p>年齢OK</p>");
+          result = result + 20;
+        }
+        result = Math.round(result / 80 * 100);
+        document.write(result + "点!");
+      </script>
+
+      <h2>共通する趣味</h2>
+      <script>
+        var hobby = "読書 映画鑑賞 登山 水泳 サイクリング";
+        var result = 0;
+        if(hobby.includes("登山")) {
+          result = result + 30;
+        }
+        document.write(result + "点！");
+      </script>
+
+      <h2>迷惑メール振り分け</h2>
+      <script>
+
+      var mail = "メールの文面";
+      if(mail.includes("出会い")) {
+        document.write("迷惑メールです");
+      }else if(mail.includes("アカウント") && mail.includes("停止")) {
+        document.write("迷惑メールです");
+      }else if(mail.includes("アカウント") && mail.includes("更新")) {
+        document.write("迷惑メールです");
+      }else{
+        document.write("迷惑メールではありません");
+      }
+      </script>
   </body>
 </html>
